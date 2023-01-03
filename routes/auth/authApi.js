@@ -9,12 +9,13 @@ const verifyJWT = require('../../middleware/verifyJWT')
 const knexDb = require("../../dbConfig/dbConfig")
 const SECERET_KEY=process.env.SECRET_KEY
 
+
 router.get('/', async (req, resp) => {
     resp.send('Auth Api')
 })
 
 // Create account
-router.post('/register',verifyJWT, async (req, resp) => {
+router.post('/register', async (req, resp) => {
     console.log("I was called");
     let userData = req.body;
     try {

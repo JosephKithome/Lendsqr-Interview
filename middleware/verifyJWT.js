@@ -6,7 +6,7 @@ require("dotenv").config();
 // This verifies the passed bearer token and checks if its valid
 const verifyJWT = (req,resp,next)=>{
     const authHeader = req.headers.authorization
-    console.log(req);
+    // console.log(req);
     if(!req.headers.authorization) {
         return resp.status(401).json({ message: `UnAuthorized Requestsssss` })
     }
@@ -19,8 +19,8 @@ const verifyJWT = (req,resp,next)=>{
     if(!payload){
         return resp.status(403).json({ message: `UnAuthorized RequestJJJJS`})
     }
-    req.userId = payload.subject
-    next()
+   
+    next( req.userId)
 }
 
 module.exports = verifyJWT
