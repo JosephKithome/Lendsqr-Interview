@@ -1,0 +1,1 @@
+SET GLOBAL foreign_key_checks=ON;

@@ -33,7 +33,7 @@ knex.raw("SELECT VERSION()").then(() => {
 // knex.schema.createTable('account', (table) => {
 //     table.increments('id').primary()
 //     table.integer('user_id').unsigned().references('users.id')
-//     table.integer('accountNumber')
+//     table.string('accountNumber')
 //     table.unique('accountNumber')
 //     table.integer('accountBalance')
 //     table.integer('amountDeposited')
@@ -54,8 +54,8 @@ knex.raw("SELECT VERSION()").then(() => {
 // knex.schema.createTable('transactions', (table) => {
 //     table.increments('id').primary()
 //     table.integer('account_id').unsigned().references('account.id')
-//     table.integer('accountNumber')
-//     table.integer('destAccountNumber')
+//     table.string('accountNumber')
+//     table.string('destAccountNumber')
 //     table.integer('amountDeposited')
 //     table.timestamp('created_at').defaultTo(knex.fn.now())
 //     table.string('purpose').defaultTo('Top Up')
@@ -80,6 +80,7 @@ knex.raw("SELECT VERSION()").then(() => {
 //     .finally(() => {
 //         knex.destroy();
 //     })
+
 
 
 module.exports = knex

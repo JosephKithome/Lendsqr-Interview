@@ -8,15 +8,16 @@ app.use(bodyParser.json())
 //Apis
 const authApi =require('./routes/auth/authApi')
 const transferApi = require('./routes/transfer/transferApi')
-const accountRouter = require('./routes/account/account')
-const fundRouter = require('./routes/fund/fund')
-
+const accountApi = require('./routes/account/account')
+const fundApi = require('./routes/fund/fund')
+const withdrawApi = require('./routes/withdraw/withdawFunds')
 
 
 app.use('/auth',authApi)
 app.use('/transfer',transferApi)
-app.use('/account',accountRouter)
-app.use('/fund',fundRouter)
+app.use('/account',accountApi)
+app.use('/fund',fundApi)
+app.use('/money',withdrawApi)
 
 
 app.listen(PORT,function(){
