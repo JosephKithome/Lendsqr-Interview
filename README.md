@@ -3,4 +3,4 @@ Demo Credit Api using Knex
 
 
 
-![Screenshot](db.png)
+![Screenshot](uml.png)
