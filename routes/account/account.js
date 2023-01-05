@@ -111,4 +111,40 @@ accountRouter.post('/fund', verifyJWT, async (req, resp) => {
 })
 
 
+// checking  account balance
+accountRouter.get('/checkbalance', verifyJWT, async (req, resp) => {
+    try {
+        const authHeader = req.headers.authorization
+        const token = authHeader.split(' ')[1]
+        let payload = jwt.verify(token, "6smhlntk6kjbictjd78llrlp2m")
+        if (!payload) {
+            return resp.status(403).json({ message: `UnAuthorized Request` })
+        }
+        let accountData = req.body
+        req.userId = payload.subject
+        req.body.user_id = req.userId
+
+
+        try {
+            //Run  a select statement to establish if a account exists
+            kknex
+            .from('account')
+            .select('accountNumber', 'accountBalance')
+            .where({userId: req.body.user_id})
+            .then( rows => {
+                resp.status(200).json(rows)
+            })
+
+            
+        } catch (error) {
+            resp.status(500).json({ message: "Error", error: error.message })
+        }
+
+    } catch (error) {
+        resp.status(500).json({ message: "Error", error: error.message })
+    }
+})
+
+
+
 module.exports = accountRouter
