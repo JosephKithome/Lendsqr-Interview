@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "npm": "8.11.0",
+  "engines": {
+    "npm": "8.11.0",
+    "node": "16.16.0"
+  },
+  
   "scripts": {
     "test:watch": "mocha --watch ./tests/*.spec.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
   },
   "keywords": [],
   "author": "",
