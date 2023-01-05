@@ -1,7 +1,7 @@
 const express =require('express');
 const  bodyParser = require('body-parser');
 
-const PORT = 2039
+const PORT = process.env.PORT
 const app =express()
 app.use(bodyParser.json())
 
@@ -21,6 +21,6 @@ app.use('/money',withdrawApi)
 
 
 app.listen(PORT,function(){
-    console.log(`Server Running on port ${PORT}`);
+    console.log(`Server Running on port ${PORT} `);
     
 })
