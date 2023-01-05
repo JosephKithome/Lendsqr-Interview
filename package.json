@@ -23,6 +23,7 @@
     "knex": "^2.3.0",
     "knex-orm": "^1.1.0",
     "mysql": "^2.18.1",
+    "pg": "^8.8.0",
     "save-dev": "^0.0.1-security",
     "swagger-stats": "^0.99.4",
     "swagger-ui-express": "^4.6.0",
