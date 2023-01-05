@@ -54,7 +54,7 @@ router.post('/login', (req, resp) => {
 
                      //Generate token
                      let payload = {subject: rows[0].id}
-                     let token = jwt.sign(payload,SECERET_KEY)
+                     let token = jwt.sign(payload,"6smhlntk6kjbictjd78llrlp2m")
                     resp.status(200).json({"token": token})
                 } else {
                     resp.status(400).json({ message: `Invalid password` })

@@ -10,7 +10,7 @@ withDrawRouter.post('/withdraw', verifyJWT, async (req, resp) => {
     try {
         const authHeader = req.headers.authorization
         const token = authHeader.split(' ')[1]
-        let payload = jwt.verify(token, process.env.SECRET_KEY)
+        let payload = jwt.verify(token, "6smhlntk6kjbictjd78llrlp2m")
         console.log("{PAYLOAD", payload);
         if (!payload) {
             return resp.status(403).json({ message: `UnAuthorized Request` })

@@ -15,7 +15,7 @@ const verifyJWT = (req,resp,next)=>{
         return resp.status(401).send({ message: `UnAuthorized RequestZZZZZ` })
     }
 
-    let payload =jwt.verify(token,process.env.SECRET_KEY)
+    let payload =jwt.verify(token,"6smhlntk6kjbictjd78llrlp2m")
     if(!payload){
         return resp.status(403).json({ message: `UnAuthorized RequestJJJJS`})
     }
