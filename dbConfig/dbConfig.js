@@ -1,6 +1,6 @@
 require("dotenv").config();
 const knex = require('knex')({
-    client: 'pg',
+    client: 'mysql',
     connection: {
         // host: process.env.DB_HOST,
         // port: process.env.DB_PORT,
@@ -32,7 +32,7 @@ knex.raw("SELECT VERSION()").then(() => {
 //   })
 
 
-// //ccount Schema
+// // //ccount Schema
 // knex.schema.createTable('account', (table) => {
 //     table.increments('id').primary()
 //     table.integer('user_id').unsigned().references('users.id')
@@ -53,7 +53,7 @@ knex.raw("SELECT VERSION()").then(() => {
 //     })
 
 
-// //Transactions  table
+// // //Transactions  table
 // knex.schema.createTable('transactions', (table) => {
 //     table.increments('id').primary()
 //     table.integer('account_id').unsigned().references('account.id')

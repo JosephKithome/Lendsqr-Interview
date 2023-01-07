@@ -7,3 +7,9 @@ class User{
 
 
 module.exports =User
+
+class Account{
+    accountNumber=''
+    accountBalance=''
+    accountType=''
+}
