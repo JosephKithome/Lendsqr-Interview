@@ -183,7 +183,6 @@
     "/register": {
       "post": {
         "description": "Register user",
-        "tags": "Authentication",
         "parameters": [
           {
             "name": "body",
