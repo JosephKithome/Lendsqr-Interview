@@ -4,7 +4,16 @@
     "version": "1.0.0",
     "title": "Demo Credit REST API",
     "description": "Demo credit bank api demonstrating all the activities that happen in a FinTech Companies",
-    "email": "Jmulingwakithome.jmk@gmail.com"
+    "email": "Jmulingwakithome.jmk@gmail.com",
+    "license": {
+      "name": "MIT",
+      "url": "https://spdx.org/licenses/MIT.html"
+    },
+    "contact": {
+      "name": "Joseph Kithome",
+      "url": "https://www.linkedin.com/in/joseph-kithome/",
+      "email": "Jmulingwakithome.jmk@gmail.com"
+    }
     
   },
   "host": "localhost:3000",
