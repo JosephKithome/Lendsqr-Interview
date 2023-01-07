@@ -2,8 +2,9 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "title": "Demo Credit REST API",
+    "description": "Demo credit bank api demonstrating all the activities that happen in a FinTech Companies",
+    "email": "Jmulingwakithome.jmk@gmail.com"
   },
   "host": "localhost:3000",
   "basePath": "/",
@@ -13,7 +14,7 @@
   "paths": {
     "/create": {
       "post": {
-        "description": "",
+        "description": "Create a Demo bank  account",
         "parameters": [
           {
             "name": "authorization",
@@ -60,7 +61,7 @@
     },
     "/fund": {
       "post": {
-        "description": "",
+        "description": "Fund an account",
         "parameters": [
           {
             "name": "authorization",
@@ -107,7 +108,7 @@
     },
     "/checkbalance/{user_id}": {
       "get": {
-        "description": "",
+        "description": "Check account balance",
         "parameters": [
           {
             "name": "user_id",
@@ -139,7 +140,7 @@
     },
     "/account_transactions/{accNo}": {
       "get": {
-        "description": "",
+        "description": "Lists all transactions related to an account",
         "parameters": [
           {
             "name": "accNo",
@@ -171,7 +172,7 @@
     },
     "/register": {
       "post": {
-        "description": "",
+        "description": "Register user",
         "parameters": [
           {
             "name": "body",
@@ -201,7 +202,7 @@
     },
     "/login": {
       "post": {
-        "description": "",
+        "description": "Login a user",
         "parameters": [
           {
             "name": "body",
@@ -234,7 +235,7 @@
     },
     "/update_profile/{user_id}": {
       "post": {
-        "description": "",
+        "description": "Update user profile",
         "parameters": [
           {
             "name": "user_id",
@@ -266,7 +267,7 @@
     },
     "/send": {
       "post": {
-        "description": "",
+        "description": "Send funds from account A to account B",
         "parameters": [
           {
             "name": "authorization",
@@ -316,7 +317,7 @@
     },
     "/withdraw": {
       "post": {
-        "description": "",
+        "description": "Withdraw funds from own account",
         "parameters": [
           {
             "name": "authorization",
