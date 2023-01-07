@@ -5,10 +5,11 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "https://lendsqr.herokuapp.com",
+  "host": "lendsqr.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/create": {
