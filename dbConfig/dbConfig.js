@@ -84,6 +84,23 @@ knex.raw("SELECT VERSION()").then(() => {
 //         knex.destroy();
 //     })
 
+// Savings account
+// knex.schema.createTable('savings', (table) => {
+//     table.increments('id').primary()
+//     table.integer('account_id').unsigned().references('account.id')
+//     table.integer('user_id').unsigned().references('users.id')
+//     table.integer('sourceAccountNumber')
+//     table.integer('purpose')
+//     table.integer('amount')
+//     table.timestamp('created_at').defaultTo(knex.fn.now())
+//     table.date('maturity_date')
+// }).then(() => {
+//     console.log("Table created successfully!!");
+// }).catch((error) => { console.log(error); throw error })
+//     .finally(() => {
+//         knex.destroy();
+//     })
+
 
 
 module.exports = knex

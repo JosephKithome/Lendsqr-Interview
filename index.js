@@ -4,7 +4,7 @@ const  bodyParser = require('body-parser');
 const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("./documentation/swagger_output.json")
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 2039
 const app =express()
 app.use(bodyParser.json())
 
@@ -22,7 +22,7 @@ app.use('/account',accountApi)
 app.use('/fund',fundApi)
 app.use('/money',withdrawApi)
 
-app.use('/doc' , swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use('/' , swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 
 
@@ -32,3 +32,6 @@ app.listen(PORT,function(){
     console.log(`Server Running on port ${PORT} `);
     
 })
+
+
+module.exports= app
