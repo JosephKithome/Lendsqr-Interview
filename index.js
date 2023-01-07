@@ -13,7 +13,7 @@ const authApi =require('./routes/auth/authApi')
 const transferApi = require('./routes/transfer/transferApi')
 const accountApi = require('./routes/account/account')
 const fundApi = require('./routes/fund/fund')
-const withdrawApi = require('./routes/withdraw/withdawFunds')
+const withdrawApi = require('./routes/withdraw/withdrawFunds')
 
 
 app.use('/auth',authApi)
