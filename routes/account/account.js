@@ -112,7 +112,7 @@ accountRouter.post('/fund', verifyJWT, async (req, resp) => {
 
 
 // checking  account balance
-accountRouter.get('/checkbalance/:user_id', verifyJWT, async (req, resp) => {
+accountRouter.get('/checkbalance', verifyJWT, async (req, resp) => {
     try {
         const authHeader = req.headers.authorization
         const token = authHeader.split(' ')[1]
