@@ -38,7 +38,7 @@ withDrawRouter.post('/withdraw', verifyJWT, async (req, resp) => {
 
                 // Transaction log history
                 // update transactions log table
-                await knexDb('transactions')
+                data = knexDb('transactions')
                     .insert({
                         'account_id': rows[0].id,
                         'amountDeposited': req.body.amountDeposited,
@@ -50,7 +50,7 @@ withDrawRouter.post('/withdraw', verifyJWT, async (req, resp) => {
 
 
             })
-        return resp.json("OK")
+        return resp.json(data)
 
     }
     catch (error) {
