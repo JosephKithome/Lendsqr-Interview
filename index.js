@@ -16,11 +16,11 @@ const fundApi = require('./routes/fund/fund')
 const withdrawApi = require('./routes/withdraw/withdrawFunds')
 
 
-// app.use('/auth',authApi)
-// app.use('/transfer',transferApi)
-// app.use('/account',accountApi)
-// app.use('/fund',fundApi)
-// app.use('/money',withdrawApi)
+app.use('/auth',authApi)
+app.use('/transfer',transferApi)
+app.use('/account',accountApi)
+app.use('/fund',fundApi)
+app.use('/money',withdrawApi)
 
 app.use('/' , swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
