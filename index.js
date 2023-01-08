@@ -20,7 +20,7 @@ app.use('/auth',authApi)
 app.use('/transfer',transferApi)
 app.use('/account',accountApi)
 app.use('/fund',fundApi)
-app.use('/money',withdrawApi)
+app.use('/money',withdrawApi) //Money transfers
 
 app.use('/' , swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
