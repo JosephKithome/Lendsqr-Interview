@@ -50,7 +50,7 @@ withDrawRouter.post('/withdraw', verifyJWT, async (req, resp) => {
 
 
             })
-        return resp.json(`Confirmed ${req.body.amountDeposited} has been withdrawn from ${req.body.sourceAccountNumber}`)
+        return resp.status(200).resp.json(`Confirmed ${req.body.amount} has been withdrawn from ${req.body.sourceAccountNumber}`)
 
     }
     catch (error) {
